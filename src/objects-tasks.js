@@ -17,8 +17,9 @@
  *    shallowCopy({a: 2, b: { a: [1, 2, 3]}}) => {a: 2, b: { a: [1, 2, 3]}}
  *    shallowCopy({}) => {}
  */
-function shallowCopy(/* obj */) {
-  throw new Error('Not implemented');
+function shallowCopy(obj) {
+  const newObj = {};
+  return Object.assign(newObj, obj);
 }
 
 /**
@@ -34,7 +35,11 @@ function shallowCopy(/* obj */) {
  */
 function mergeObjects(/* objects */) {
   throw new Error('Not implemented');
+  // const mergedObjects = Object.assign({}, ...objects);
+  // console.log(mergedObjects);
 }
+
+// mergeObjects([{a: 1, b: 2}, {b: 3, c: 5}]);
 
 /**
  * Removes a properties from an object.
